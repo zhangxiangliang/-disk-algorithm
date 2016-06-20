@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>磁盘调度算法</title>
+	<link rel="stylesheet" href="css/sstf-and-scan.css">
+</head>
+<body>
+	<header class="header">
+		<h1>磁盘调度算法</h1>
+		<input class="sequence" type="text">
+		<a href="javascript:init()">新建</a>
+	</header>
+	<div class="container">
+		<div class="computer head">
+			<div class="nav">
+				<span class="btn red"></span>
+				<span class="btn yellow"></span>
+				<span class="btn green"></span>
+			</div>
+			<div class="comment"># 请创建磁盘序列</div>
+			<div id="boxs" class="boxs">
+				<div class="box red">当前磁盘序列为空</div>
+			</div>
+		</div>
+		<div class="computer neck"></div>
+		<div class="computer controls">
+			<div class="control">
+				<p class="title">控制台</p>
+				<div class="buttons">
+					<a onclick="javascript:clearAll()" class="button">重置</a>
+					<a onclick="javascript:reset()" class="button">恢复</a>
+					<a onclick="javascript:closeRun()" class="button">停止</a>
+				</div>
+			</div>
+			<div class="control">
+				<p class="title">调度算法</p>
+				<div class="buttons">
+					<a onclick="javascript:SSTF()" class="button">SSTF</a>
+					<a onclick="javascript:SCAN()" class="button">SCAN</a>
+				</div>
+			</div>
+			<div class="control">
+				<p class="title">磁头方向</p>
+				<div class="buttons">
+					<a onclick="asc()" class="button">向内</a>
+					<a onclick="desc()" class="button">向外</a>
+				</div>
+			</div>
+		</div>
+		<div class="computer result">
+			<p class="title">调度序列</p>
+			<div class="boxs">
+				<div class="box" style="padding: 0 15px;">暂无结果</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mixitup.js"></script>
+	<script src="js/sstf-and-scan.css.js"></script>
+</body>
+</html>

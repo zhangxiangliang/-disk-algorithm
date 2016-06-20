@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>内存管理</title>
+	<link rel="stylesheet" href="css/page-replace.css">
+</head>
+<body>
+	<header class="header">
+		<h1>内存管理</h1>
+		<!-- <input class="sequence" type="text"> -->
+		<!-- <a href="javascript:init()">新建</a> -->
+	</header>
+	<section>
+		<div id="manages" class="manages">
+			<div class="manage cpu blue">
+				<p class="title">内存状态</p>
+				<p class="content">0</p>
+			</div>
+			<div class="manage lose blue">
+				<p class="title">缺页率</p>
+				<p class="content">0</p>
+			</div>
+			<div class="manage stack blue">
+				<p class="title">队列剩余</p>
+				<p class="content">0</p>
+			</div>
+			<div class="manage method blue">
+				<p class="title">算法</p>
+				<p class="content">FIFO</p>
+			</div>
+		</div>
+		<div class="memorys container">
+			<div class="memory head">
+				<!-- <div class="close btn">x</div> -->
+				<div class="title">虚拟存储器</div>
+			</div>
+			<div class="memory boxs" id="boxs">
+				<div class="box">空闲</div>
+				<div class="box">空闲</div>
+				<div class="box">空闲</div>
+				<div class="box">空闲</div>
+				<div class="box">空闲</div>
+				<div class="box">空闲</div>
+				<div class="box">空闲</div>
+			</div>
+			<div id="minis" class="memory minis">
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="control">
+				<p class="title">控制台</p>
+				<div class="buttons">
+					<a onclick="run()" class="button">运行</a>
+					<a onclick="clearAll()" class="button">重置</a>
+					<a onclick="stopAll()" class="button">停止</a>
+				</div>
+			</div>
+			<div class="control">
+				<p class="title">调度算法</p>
+				<div class="buttons">
+					<a onclick="setMethod(this)" class="button">FIFO</a>
+					<a onclick="setMethod(this)" class="button">LRU</a>
+					<a onclick="setMethod(this)" class="button">NUR</a>
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="control">
+				<p class="title">页块数</p>
+				<div class="buttons">
+					<input id="memoryNumber" type="text">
+					<a onclick="initMemoryNumber()" class="button">创建</a>
+				</div>
+			</div>
+			<div class="control">
+				<p class="title">创建队列</p>
+				<div class="buttons">
+					<input id="stack" type="text">
+					<a onclick="initStack()" class="button">创建</a>
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="control">
+				<p class="title">队列</p>
+				<div class="buttons" id="stackWait">
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="control">
+				<p class="title">完成队列</p>
+				<div class="buttons" id="stackFinish">
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mixitup.js"></script>
+	<script src="js/page-replace.js"></script>
+</body>
+</html>
